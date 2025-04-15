@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sales Performance Dashboard - Go PowerBI</title>
+  <base href="/gopowerbi/"> <!-- 💥 KEY FIX FOR GITHUB PAGES -->
+  <title>Cloud Data Warehouse Migration - Go PowerBI</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -16,50 +17,48 @@
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="/gopowerbi/index.html" class="text-2xl font-bold text-indigo-600">Go PowerBI</a>
-      <a href="/gopowerbi/index.html#portfolio" class="text-sm text-gray-600 hover:text-indigo-600">← Back to Projects</a>
+      <a href="index.html" class="text-2xl font-bold text-indigo-600">Go PowerBI</a>
+      <a href="index.html#portfolio" class="text-sm text-gray-600 hover:text-indigo-600">← Back to Projects</a>
     </nav>
   </header>
 
   <!-- Hero -->
   <section class="bg-indigo-600 text-white py-20">
     <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl font-bold">Sales Performance Dashboard</h1>
-      <p class="text-indigo-200 mt-4">Power BI | Sales Analytics | Dashboard Engineering</p>
+      <h1 class="text-4xl font-bold">Cloud Data Warehouse Migration</h1>
+      <p class="text-indigo-200 mt-4">Azure | Synapse | Data Factory | Migration Strategy</p>
     </div>
   </section>
 
   <!-- Project Content -->
   <section class="py-16">
     <div class="container mx-auto px-6 max-w-4xl">
-      <img src="/gopowerbi/assets/images/Sales_Demo.png" alt="Sales Dashboard Screenshot" class="rounded-lg shadow-lg mb-8" />
+      <img src="assets/images/Sales_Demo.png" alt="Warehouse Migration Screenshot" class="rounded-lg shadow-lg mb-8" />
 
       <h2 class="text-2xl font-semibold mb-4">Overview</h2>
       <p class="text-gray-700 mb-6">
-        This project involved designing and deploying an interactive Power BI dashboard for a global retail client.
-        The goal was to provide clear visibility into sales KPIs across multiple regions and product categories, empowering the sales team with actionable insights.
+        Led a strategic migration project from an on-premise SQL Server data warehouse to Azure Synapse Analytics. 
+        This allowed for better scalability, faster querying, and native integration with Azure Data Factory pipelines.
       </p>
 
       <h2 class="text-2xl font-semibold mb-4">Key Features</h2>
       <ul class="list-disc list-inside text-gray-700 mb-6">
-        <li>Dynamic filtering and drill-downs</li>
-        <li>Advanced DAX measures for YoY & MoM comparisons</li>
-        <li>Custom visualizations for product performance</li>
-        <li>Data refresh automation via Power BI Gateway</li>
+        <li>Data lake and Synapse workspace setup</li>
+        <li>Incremental data movement using ADF pipelines</li>
+        <li>CI/CD integration for deployment</li>
+        <li>Cost optimization and monitoring using Azure Cost Management</li>
       </ul>
 
       <h2 class="text-2xl font-semibold mb-4">Technology Stack</h2>
       <div class="flex flex-wrap gap-2 mb-12">
-        <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-3 py-1 rounded">Power BI</span>
-        <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded">DAX</span>
-        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded">SQL Server</span>
-        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded">ETL</span>
-        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded">Data Modeling</span>
+        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded">Azure Synapse</span>
+        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded">Data Factory</span>
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded">SQL</span>
+        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded">CI/CD</span>
       </div>
 
-      <!-- Optional CTA -->
       <div class="text-center">
-        <a href="/gopowerbi/index.html#contact" class="inline-block bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-indigo-700 transition duration-300">
+        <a href="index.html#contact" class="inline-block bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-indigo-700 transition duration-300">
           Get in Touch About This Project
         </a>
       </div>
