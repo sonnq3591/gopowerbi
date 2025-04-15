@@ -19,25 +19,35 @@
   <header class="bg-white shadow-md sticky top-0 z-50">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="text-2xl font-bold text-indigo-600">Go PowerBI</a>
-      <div class="space-x-6 hidden md:flex">
+      <div class="space-x-6 hidden md:flex items-center">
         <a href="#home" class="text-gray-600 hover:text-indigo-600">Home</a>
         <a href="#services" class="text-gray-600 hover:text-indigo-600">Services</a>
-        <a href="#portfolio" class="text-gray-600 hover:text-indigo-600">Portfolio</a>
+        <!-- Dropdown Portfolio -->
+        <div class="relative group">
+          <button class="text-gray-600 hover:text-indigo-600 focus:outline-none">Portfolio</button>
+          <div class="absolute hidden group-hover:block bg-white shadow-md rounded-md mt-2 z-50 min-w-[200px]">
+            <a href="#portfolio-pbi" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Power BI Projects</a>
+            <a href="#portfolio-de" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50">Data Engineering Projects</a>
+          </div>
+        </div>
         <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
       </div>
       <button class="md:hidden focus:outline-none" id="mobile-menu-button">
-        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
       </button>
     </nav>
     <div id="mobile-menu" class="md:hidden hidden bg-white py-2">
       <a href="#home" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50">Home</a>
       <a href="#services" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50">Services</a>
-      <a href="#portfolio" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50">Portfolio</a>
+      <a href="#portfolio-pbi" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50">Portfolio</a>
       <a href="#contact" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50">Contact</a>
     </div>
   </header>
 
   <main>
+
     <!-- Hero Section -->
     <section id="home" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-24 md:py-32 section-fade-in">
       <div class="container mx-auto px-6 text-center">
@@ -51,7 +61,7 @@
     <section id="services" class="py-20 section-fade-in">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">My Services</h2>
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-4 gap-8">
           <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
             <h3 class="text-xl font-semibold mb-3 text-center">Power BI Development</h3>
             <p class="text-gray-600 text-center">Interactive dashboards and advanced data modeling using DAX.</p>
@@ -64,19 +74,23 @@
             <h3 class="text-xl font-semibold mb-3 text-center">Data Strategy & Advisory</h3>
             <p class="text-gray-600 text-center">Governance, data quality frameworks, and long-term strategy.</p>
           </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+            <h3 class="text-xl font-semibold mb-3 text-center">Data Engineering</h3>
+            <p class="text-gray-600 text-center">Modern ETL pipelines for scalable and secure analytics workflows.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="bg-gray-100 py-20 section-fade-in">
+    <!-- Portfolio Section - Power BI -->
+    <section id="portfolio-pbi" class="bg-gray-100 py-20 section-fade-in">
       <div class="container mx-auto px-6">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Featured Projects</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Power BI Projects</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          <!-- Project 1 -->
+          <!-- Project Card 1 -->
           <a href="/gopowerbi/projects/project1.html" class="block bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition duration-300">
-            <img src="/gopowerbi/assets/images/Sales_Demo.png" alt="Sales Performance Dashboard" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300" />
+            <img src="/gopowerbi/assets/images/Sales_Demo.png" alt="Sales Dashboard" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300" />
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-2">Sales Performance Dashboard</h3>
               <p class="text-gray-600 mb-4">Power BI dashboard for KPI visibility and sales analytics.</p>
@@ -85,37 +99,32 @@
             </div>
           </a>
 
-          <!-- Project 2 -->
-          <a href="projects/project2.html" class="block bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition duration-300">
-            <img src="https://placehold.co/600x400/86efac/ffffff?text=Project+2+Screenshot" alt="Cloud Data Warehouse Migration" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section - Data Engineering -->
+    <section id="portfolio-de" class="bg-gray-50 py-20 section-fade-in">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Data Engineering Projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Project Card 2 -->
+          <a href="/gopowerbi/projects/project2.html" class="block bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition duration-300">
+            <img src="https://placehold.co/600x400/86efac/ffffff?text=Cloud+DW" alt="Cloud Migration" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300" />
             <div class="p-6">
               <h3 class="text-xl font-semibold mb-2">Cloud Data Warehouse Migration</h3>
-              <p class="text-gray-600 mb-4">Modernized data stack using Azure Synapse and Data Factory.</p>
+              <p class="text-gray-600 mb-4">Migration to Azure Synapse and data orchestration via Data Factory.</p>
               <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Azure</span>
               <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Data Engineering</span>
             </div>
           </a>
 
-          <!-- Project 3 -->
-          <a href="projects/project3.html" class="block bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition duration-300">
-            <img src="https://placehold.co/600x400/fca5a5/ffffff?text=Project+3+Screenshot" alt="Marketing Campaign Analysis" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300" />
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-2">Marketing Campaign Analysis</h3>
-              <p class="text-gray-600 mb-4">Performance metrics and ROI tracking for digital marketing campaigns.</p>
-              <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Power BI</span>
-              <span class="inline-block bg-pink-100 text-pink-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Marketing Analytics</span>
-            </div>
-          </a>
-
-        </div>
-
-        <div class="text-center mt-12">
-          <a href="#contact" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-300">Let’s Work Together &rarr;</a>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact" class="py-20 section-fade-in">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Let's Connect</h2>
@@ -146,6 +155,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
@@ -157,12 +167,10 @@
   </footer>
 
   <script>
-    // Mobile Menu Toggle
     document.getElementById('mobile-menu-button').addEventListener('click', () => {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
 
-    // Section Fade-in on Scroll
     const sections = document.querySelectorAll('.section-fade-in');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
