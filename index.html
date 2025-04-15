@@ -1,256 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Power BI & Data Platform Consultant</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Apply Inter font globally */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Smooth scroll behavior */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Simple animation for sections */
-        .section-fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .section-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        /* Basic styling for code blocks */
-        pre {
-            background-color: #f9fafb; /* Slightly lighter gray (gray-50) for contrast */
-            color: #1f2937; /* gray-800 */
-            padding: 1rem;
-            border-radius: 0.375rem; /* rounded-md */
-            border: 1px solid #e5e7eb; /* Add subtle border (gray-200) */
-            overflow-x: auto; /* Handle long lines */
-            font-family: 'Consolas', 'Monaco', 'Courier New', monospace; /* Monospace font */
-            font-size: 0.875rem; /* text-sm */
-            line-height: 1.5; /* Increased line-height */
-            margin-top: 1rem; /* Add space above code block */
-        }
-        /* Remove default code styling if needed */
-        code {
-           font-family: inherit; /* Inherit from pre */
-           color: inherit;
-           background: none;
-           padding: 0;
-           font-size: inherit;
-        }
-
-        /* DAX Syntax Highlighting Simulation */
-        .dax-function { color: #2563eb; } /* Blue-600 */
-        .dax-measure-column { color: #059669; } /* Emerald-600 */
-        .dax-string { color: #db2777; } /* Pink-600 */
-        .dax-operator { color: #737373; } /* Neutral-500 */
-        .dax-comment { color: #008000; } /* Green (Standard comment color) */
-        .dax-keyword { color: #7c3aed; } /* Violet-600 */
-        .dax-number { color: #ea580c; } /* Orange-600 */
-
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power BI & Data Platform Consultant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+    .section-fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .section-visible { opacity: 1; transform: translateY(0); }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-indigo-600">Your Name</a>
-            <div class="space-x-6 hidden md:flex">
-                <a href="#home" class="text-gray-600 hover:text-indigo-600 transition duration-300">Home</a>
-                <a href="#services" class="text-gray-600 hover:text-indigo-600 transition duration-300">Services</a>
-                <a href="#portfolio" class="text-gray-600 hover:text-indigo-600 transition duration-300">Portfolio</a>
-                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
-            </div>
-            <button class="md:hidden focus:outline-none" id="mobile-menu-button">
-                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </nav>
-        <div id="mobile-menu" class="md:hidden hidden bg-white py-2">
-            <a href="#home" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50">Home</a>
-            <a href="#services" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50">Services</a>
-            <a href="#portfolio" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50">Portfolio</a>
-            <a href="#contact" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50">Contact</a>
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-indigo-600">Go PowerBI</a>
+      <div class="space-x-6 hidden md:flex">
+        <a href="#home" class="text-gray-600 hover:text-indigo-600">Home</a>
+        <a href="#services" class="text-gray-600 hover:text-indigo-600">Services</a>
+        <a href="#portfolio" class="text-gray-600 hover:text-indigo-600">Portfolio</a>
+        <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
+      </div>
+      <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="md:hidden hidden bg-white py-2">
+      <a href="#home" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50">Home</a>
+      <a href="#services" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50">Services</a>
+      <a href="#portfolio" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50">Portfolio</a>
+      <a href="#contact" class="block px-6 py-2 text-gray-600 hover:bg-indigo-50">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-24 md:py-32 section-fade-in">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Unlock Insights with Expert Data Solutions</h1>
+        <p class="text-lg md:text-xl mb-8 text-indigo-100">Specializing in Power BI and Modern Data Platforms to drive your business forward.</p>
+        <a href="#contact" class="bg-white text-indigo-600 font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-100 transition duration-300">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 section-fade-in">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">My Services</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+            <h3 class="text-xl font-semibold mb-3 text-center">Power BI Development</h3>
+            <p class="text-gray-600 text-center">Interactive dashboards and advanced data modeling using DAX.</p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+            <h3 class="text-xl font-semibold mb-3 text-center">Data Platform Consulting</h3>
+            <p class="text-gray-600 text-center">Cloud architecture, data lakes, and scalable pipelines.</p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+            <h3 class="text-xl font-semibold mb-3 text-center">Data Strategy & Advisory</h3>
+            <p class="text-gray-600 text-center">Governance, data quality frameworks, and long-term strategy.</p>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="bg-gray-100 py-20 section-fade-in">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Featured Projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <section id="home" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-24 md:py-32 section-fade-in">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Unlock Insights with Expert Data Solutions</h1>
-                <p class="text-lg md:text-xl mb-8 text-indigo-100">Specializing in Power BI and Modern Data Platforms to drive your business forward.</p>
-                <a href="#contact" class="bg-white text-indigo-600 font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-100 transition duration-300">Get in Touch</a>
+          <!-- Project 1 -->
+          <a href="projects/project1.html" class="block bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition duration-300">
+            <img src="assets/images/Sales_Demo.png" alt="Sales Performance Dashboard" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Sales Performance Dashboard</h3>
+              <p class="text-gray-600 mb-4">Power BI dashboard for KPI visibility and sales analytics.</p>
+              <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Power BI</span>
+              <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Sales Analytics</span>
             </div>
-        </section>
+          </a>
 
-        <section id="services" class="py-20 section-fade-in">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">My Services</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 flex flex-col"> 
-                        <div class="text-indigo-500 mb-4">
-                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-center">Power BI Development</h3>
-                        <p class="text-gray-600 text-center flex-grow">Creating interactive dashboards, reports, and data models to visualize your key metrics.</p> 
-                        <pre><code class="language-dax">Test Measure <span class="dax-operator">=</span>
-  <span class="dax-function">CALCULATE</span> (
-      <span class="dax-measure-column">[Sales]</span>,
-      <span class="dax-measure-column">Dim[Date]</span> <span class="dax-operator">=</span> <span class="dax-string">"2025-01-01"</span>
-  )</code></pre>
-                        </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                         <div class="text-indigo-500 mb-4">
-                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-center">Data Platform Consulting</h3>
-                        <p class="text-gray-600 text-center">Designing and implementing scalable cloud-based data warehouses, data lakes, and ETL/ELT pipelines.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                         <div class="text-indigo-500 mb-4">
-                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-center">Data Strategy & Advisory</h3>
-                        <p class="text-gray-600 text-center">Helping you define a clear data roadmap, governance policies, and best practices for data management.</p>
-                    </div>
-                </div>
+          <!-- Project 2 -->
+          <a href="projects/project2.html" class="block bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition duration-300">
+            <img src="https://placehold.co/600x400/86efac/ffffff?text=Project+2+Screenshot" alt="Cloud Data Warehouse Migration" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Cloud Data Warehouse Migration</h3>
+              <p class="text-gray-600 mb-4">Modernized data stack using Azure Synapse and Data Factory.</p>
+              <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Azure</span>
+              <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Data Engineering</span>
             </div>
-        </section>
+          </a>
 
-        <section id="portfolio" class="bg-gray-100 py-20 section-fade-in">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Featured Projects</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/a3bffa/ffffff?text=Project+1+Screenshot" alt="Project 1 Screenshot" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2">Sales Performance Dashboard</h3>
-                            <p class="text-gray-600 mb-4">Developed a comprehensive Power BI dashboard for tracking sales KPIs.</p>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Power BI</span>
-                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Sales Analytics</span>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/86efac/ffffff?text=Project+2+Screenshot" alt="Project 2 Screenshot" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2">Cloud Data Warehouse Migration</h3>
-                            <p class="text-gray-600 mb-4">Led the migration of an on-premise data warehouse to Azure Synapse Analytics.</p>
-                             <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Azure</span>
-                             <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Data Engineering</span>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/fca5a5/ffffff?text=Project+3+Screenshot" alt="Project 3 Screenshot" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
-                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2">Marketing Campaign Analysis</h3>
-                            <p class="text-gray-600 mb-4">Built reporting tools to measure marketing ROI and campaign effectiveness.</p>
-                            <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Power BI</span>
-                            <span class="inline-block bg-pink-100 text-pink-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Marketing Analytics</span>
-                        </div>
-                    </div>
-                </div>
-                 <div class="text-center mt-12">
-                     <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-300">View More Projects &rarr;</a>
-                 </div>
+          <!-- Project 3 -->
+          <a href="projects/project3.html" class="block bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition duration-300">
+            <img src="https://placehold.co/600x400/fca5a5/ffffff?text=Project+3+Screenshot" alt="Marketing Campaign Analysis" class="w-full h-48 object-cover group-hover:opacity-80 transition duration-300" />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Marketing Campaign Analysis</h3>
+              <p class="text-gray-600 mb-4">Performance metrics and ROI tracking for digital marketing campaigns.</p>
+              <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Power BI</span>
+              <span class="inline-block bg-pink-100 text-pink-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Marketing Analytics</span>
             </div>
-        </section>
+          </a>
 
-        <section id="contact" class="py-20 section-fade-in">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Let's Connect</h2>
-                <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-                     <p class="text-center text-gray-600 mb-8">Interested in working together or have a question? Fill out the form below or email me directly.</p>
-                    <form action="#" method="POST"> <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                                <input type="text" name="name" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                                <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
-                            </div>
-                        </div>
-                        <div class="mb-6">
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                            <input type="text" name="subject" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
-                        </div>
-                        <div class="mb-6">
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                            <textarea name="message" id="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Send Message</button>
-                        </div>
-                    </form>
-                    <div class="text-center mt-8">
-                        <p class="text-gray-600">Or reach out via email: <a href="mailto:your.email@example.com" class="text-indigo-600 hover:underline">your.email@example.com</a></p>
-                        </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-gray-800 text-gray-300 py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
-            <p class="text-sm mt-2">Built with HTML & Tailwind CSS</p>
         </div>
-    </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        const menuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+        <div class="text-center mt-12">
+          <a href="#contact" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-300">Let’s Work Together &rarr;</a>
+        </div>
+      </div>
+    </section>
 
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 section-fade-in">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Let's Connect</h2>
+        <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+          <form action="#" method="POST">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+              </div>
+            </div>
+            <div class="mb-6">
+              <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+              <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+            <div class="mb-6">
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+              <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        // Close mobile menu when a link is clicked
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; 2025 Go PowerBI. All rights reserved.</p>
+      <p class="text-sm mt-2">Built with HTML & Tailwind CSS</p>
+    </div>
+  </footer>
 
-        // Section Fade-in on Scroll
-        const sections = document.querySelectorAll('.section-fade-in');
-        const observerOptions = {
-            root: null, // relative to the viewport
-            rootMargin: '0px',
-            threshold: 0.1 // trigger when 10% of the section is visible
-        };
+  <script>
+    // Mobile Menu Toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
 
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('section-visible');
-                    // Optional: Stop observing after the animation has run
-                    // observer.unobserve(entry.target);
-                }
-                // Optional: Fade out when scrolling out of view
-                // else {
-                //     entry.target.classList.remove('section-visible');
-                // }
-            });
-        }, observerOptions);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+    // Section Fade-in on Scroll
+    const sections = document.querySelectorAll('.section-fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('section-visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>
