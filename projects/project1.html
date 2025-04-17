@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <base href="/gopowerbi/"> <!-- 💥 KEY FIX FOR GITHUB PAGES -->
-  <title>Cloud Data Warehouse Migration - Go PowerBI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="/gopowerbi/">
+  <title>Sales Report with Power BI</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -23,45 +24,141 @@
   </header>
 
   <!-- Hero -->
-  <section class="bg-indigo-600 text-white py-20">
-    <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl font-bold">Cloud Data Warehouse Migration</h1>
-      <p class="text-indigo-200 mt-4">Azure | Synapse | Data Factory | Migration Strategy</p>
+  <section class="bg-indigo-600 text-white py-20 text-center">
+    <div class="container mx-auto px-6">
+      <h1 class="text-4xl font-bold mb-2">Sales Report with Power BI</h1>
+      <p class="text-indigo-200">2023</p>
     </div>
   </section>
 
-  <!-- Project Content -->
-  <section class="py-16">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <img src="assets/images/Sales_Demo.png" alt="Warehouse Migration Screenshot" class="rounded-lg shadow-lg mb-8" />
+  <!-- Architecture Overview -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6 max-w-4xl text-center">
+    <h2 class="text-2xl font-semibold mb-4">Architecture Overview</h2>
+    <p class="text-gray-700 mb-8">
+      This end-to-end data architecture powers the reporting pipeline, integrating diverse sources like SAP, SQL, and Excel through Azure services into Power BI.
+    </p>
+    <figure>
+      <img src="assets/images/architecture.png" alt="Power BI Architecture Diagram" class="rounded-lg shadow mx-auto max-w-full" />
+      <figcaption class="text-sm text-gray-500 mt-2">Data flow: Source → Azure Data Factory → Synapse → Analysis Services → Power BI</figcaption>
+    </figure>
+  </div>
+</section>
 
-      <h2 class="text-2xl font-semibold mb-4">Overview</h2>
-      <p class="text-gray-700 mb-6">
-        Led a strategic migration project from an on-premise SQL Server data warehouse to Azure Synapse Analytics. 
-        This allowed for better scalability, faster querying, and native integration with Azure Data Factory pipelines.
-      </p>
 
-      <h2 class="text-2xl font-semibold mb-4">Key Features</h2>
-      <ul class="list-disc list-inside text-gray-700 mb-6">
-        <li>Data lake and Synapse workspace setup</li>
-        <li>Incremental data movement using ADF pipelines</li>
-        <li>CI/CD integration for deployment</li>
-        <li>Cost optimization and monitoring using Azure Cost Management</li>
-      </ul>
+<!-- Dataset Visuals -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6 max-w-3xl text-center">
+    <h2 class="text-2xl font-semibold mb-4">Dataset Visuals</h2>
+    <p class="text-gray-700 mb-8">
+      The dataset includes key sales metrics like Quantity and Amount across dimensions such as Product, Customer, Channel, Calendar, and Territory.
+    </p>
+    <figure>
+      <img src="assets/images/dataset1.png" alt="Dataset Preview" class="rounded-lg shadow mx-auto max-w-full" />
+      <figcaption class="text-sm text-gray-500 mt-2">Sales dataset schema prepared for Power BI</figcaption>
+    </figure>
+  </div>
+</section>
 
-      <h2 class="text-2xl font-semibold mb-4">Technology Stack</h2>
-      <div class="flex flex-wrap gap-2 mb-12">
-        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded">Azure Synapse</span>
-        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded">Data Factory</span>
-        <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded">SQL</span>
-        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded">CI/CD</span>
+
+<!-- Data Model Visuals -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-6 max-w-3xl text-center">
+    <h2 class="text-2xl font-semibold mb-4">Data Model Visuals</h2>
+    <p class="text-gray-700 mb-8">
+      Below is the Power BI star-schema model with one fact table and five dimension tables, designed to support scalable reporting and analysis.
+    </p>
+    <figure>
+      <img src="assets/images/datamodel1.png" alt="Data Model Schema" class="rounded-lg shadow mx-auto max-w-full" />
+      <figcaption class="text-sm text-gray-500 mt-2">Star-schema layout: Fact_Sell_In_Invoice and related dimensions</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+  <!-- Features -->
+  <section class="py-16 bg-white text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-2xl font-semibold mb-6">Key Power BI Features</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded">Bookmarks</span>
+        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded">Tooltips</span>
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded">Drill Up/Down</span>
+        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded">Field Parameters</span>
+        <span class="bg-pink-100 text-pink-800 text-xs font-semibold px-3 py-1 rounded">Calculation Groups</span>
+        <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded">Top N</span>
+        <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-3 py-1 rounded">Dynamic Selection</span>
       </div>
+    </div>
+  </section>
 
-      <div class="text-center">
-        <a href="index.html#contact" class="inline-block bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-indigo-700 transition duration-300">
-          Get in Touch About This Project
-        </a>
+  <!-- Analysis Sections -->
+  <!-- Repeated structure for each analysis block -->
+  
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6 max-w-5xl">
+        <h2 class="text-2xl font-semibold mb-4">Overview Analysis</h2>
+        <p class="text-gray-700 mb-6">Overall sales performance, contribution by dimension, and YOY growth</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <img src="assets/images/overview1.png" class="rounded-lg shadow" />
+          <img src="assets/images/overview2.png" class="rounded-lg shadow" />
+          <img src="assets/images/overview3.png" class="rounded-lg shadow" />
+        </div>
       </div>
+    </section>
+    
+   <!-- Like-for-Like Analysis -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-6 max-w-3xl text-center">
+    <h2 class="text-2xl font-semibold mb-4">Like-for-Like Analysis</h2>
+    <p class="text-gray-700 mb-8">
+      Comparison of the same SKUs across years and how new products have contributed to year-over-year sales growth.
+    </p>
+    <figure>
+      <img src="assets/images/likeforlike1.png" alt="Like-for-Like" class="rounded-lg shadow mx-auto max-w-full" />
+      <figcaption class="text-sm text-gray-500 mt-2">Like-for-Like SKU Analysis</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- Scatter Analysis -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6 max-w-3xl text-center">
+    <h2 class="text-2xl font-semibold mb-4">Scatter Analysis</h2>
+    <p class="text-gray-700 mb-8">
+      Visualizing sales trends across Products and Regions, with insights into Customer distribution and segmentation.
+    </p>
+    <figure>
+      <img src="assets/images/scatter1.png" alt="Scatter Chart" class="rounded-lg shadow mx-auto max-w-full" />
+      <figcaption class="text-sm text-gray-500 mt-2">Customer vs Product Segmentation</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- Dynamic Analysis -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-6 max-w-3xl text-center">
+    <h2 class="text-2xl font-semibold mb-4">Dynamic Analysis</h2>
+    <p class="text-gray-700 mb-8">
+      Interactive use of dynamic axis and legend to explore multiple sales metrics from different analytical perspectives.
+    </p>
+    <figure>
+      <img src="assets/images/dynamic1.png" alt="Dynamic Chart" class="rounded-lg shadow mx-auto max-w-full" />
+      <figcaption class="text-sm text-gray-500 mt-2">Dynamic Axis & Metric Switching</figcaption>
+    </figure>
+  </div>
+</section>
+
+    
+
+  <!-- CTA -->
+  <section class="py-16 bg-indigo-600 text-white text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-4">Want a Similar Dashboard?</h2>
+      <p class="mb-6 text-indigo-200">Reach out and let’s build your next data success story.</p>
+      <a href="index.html#contact" class="inline-block bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition duration-300">
+        Contact Me
+      </a>
     </div>
   </section>
 
