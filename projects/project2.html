@@ -45,43 +45,49 @@
     </div>
   </section>
 
-  <!-- Image/Diagram Placeholder -->
-  <section class="py-10">
-    <div class="container mx-auto px-6">
-      <div class="bg-white border rounded-lg shadow-lg p-6 flex items-center justify-center h-64 text-gray-400 text-sm text-center">
-        <figure>
-          <img src="assets/images/project2_pipeline.png" alt="Pipeline Diagram" class="rounded-lg shadow mx-auto max-w-full" />
-        </figure>
-      </div>
+  <!-- Pipeline Diagram with Scroll Fix -->
+<section class="py-10">
+  <div class="container mx-auto px-6">
+    <div class="bg-white border rounded-lg shadow-lg p-4 overflow-auto">
+      <figure class="min-w-full">
+        <img src="assets/images/project2_pipeline.png" alt="Pipeline Diagram" class="rounded-lg shadow max-w-none w-full h-auto" />
+      </figure>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Feature List -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-6">
-      <div class="max-w-2xl mx-auto text-center">
-        <h2 class="text-2xl font-semibold mb-6">Core Features</h2>
-        <ul class="space-y-4 text-gray-700 text-left">
-          <li class="flex items-start gap-2">
-            <span class="text-green-600 text-xl">✅</span>
-            <span>Azure Functions + Logic Apps for scalable ETL</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="text-green-600 text-xl">✅</span>
-            <span>Synapse Dedicated Pool for central data warehouse</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="text-green-600 text-xl">✅</span>
-            <span>OpenAI model scoring staff across 8 core skills</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="text-green-600 text-xl">✅</span>
-            <span>Power BI dashboards with executive-level KPIs</span>
-          </li>
-        </ul>
-      </div>
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-2xl font-semibold mb-6">Architecture Highlights</h2>
+      <ul class="space-y-4 text-gray-700 text-left">
+        <li class="flex items-start gap-2">
+          <span class="text-green-600 text-xl">✅</span>
+          <span>Secrets securely managed using Azure Key Vault</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-green-600 text-xl">✅</span>
+          <span>Azure Function retrieves secrets & calls OpenAI API for cost-effective inference</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-green-600 text-xl">✅</span>
+          <span>Comments cleaned and scored, stored back to ADLS</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-green-600 text-xl">✅</span>
+          <span>Processed data ingested to SQL Pool via ADF for analytics</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-green-600 text-xl">✅</span>
+          <span>Final visualizations powered by Synapse + Power BI dashboards</span>
+        </li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Testimonial -->
   <section class="bg-indigo-50 py-12">
