@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <base href="/gopowerbi/"> <!-- 💥 KEY FIX FOR GITHUB PAGES -->
-  <title>Cloud Data Warehouse Migration - Go PowerBI</title>
+  <base href="/gopowerbi/">
+  <title>Automation with Power Automate - Go PowerBI</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -23,44 +23,74 @@
   </header>
 
   <!-- Hero -->
-  <section class="bg-indigo-600 text-white py-20">
+  <section class="bg-gradient-to-r from-indigo-700 to-indigo-500 text-white py-20">
     <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl font-bold">Cloud Data Warehouse Migration</h1>
-      <p class="text-indigo-200 mt-4">Azure | Synapse | Data Factory | Migration Strategy</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Automation with Power Automate</h1>
+      <p class="text-indigo-200 mt-4 max-w-2xl mx-auto">
+        Intelligent document processing, data orchestration, reporting refreshes and human-in-the-loop automation using Power Automate and AI.
+      </p>
     </div>
   </section>
 
-  <!-- Project Content -->
-  <section class="py-16">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <img src="assets/images/Sales_Demo.png" alt="Warehouse Migration Screenshot" class="rounded-lg shadow-lg mb-8" />
-
-      <h2 class="text-2xl font-semibold mb-4">Overview</h2>
-      <p class="text-gray-700 mb-6">
-        Led a strategic migration project from an on-premise SQL Server data warehouse to Azure Synapse Analytics. 
-        This allowed for better scalability, faster querying, and native integration with Azure Data Factory pipelines.
-      </p>
-
-      <h2 class="text-2xl font-semibold mb-4">Key Features</h2>
-      <ul class="list-disc list-inside text-gray-700 mb-6">
-        <li>Data lake and Synapse workspace setup</li>
-        <li>Incremental data movement using ADF pipelines</li>
-        <li>CI/CD integration for deployment</li>
-        <li>Cost optimization and monitoring using Azure Cost Management</li>
-      </ul>
-
-      <h2 class="text-2xl font-semibold mb-4">Technology Stack</h2>
-      <div class="flex flex-wrap gap-2 mb-12">
-        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded">Azure Synapse</span>
-        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded">Data Factory</span>
-        <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded">SQL</span>
-        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded">CI/CD</span>
+  <!-- Flows Preview Section (Side by Side Layout) -->
+<section class="py-12">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+      <div class="bg-white p-4 rounded shadow">
+        <img src="assets/images/flow1.png" alt="Flow 1" class="max-w-full h-auto object-contain mx-auto" />
+        <p class="text-center mt-2 text-sm text-gray-600">Flow 1: Manual + Word + Email</p>
       </div>
+      <div class="bg-white p-4 rounded shadow">
+        <img src="assets/images/flow2.png" alt="Flow 2" class="max-w-full h-auto object-contain mx-auto" />
+        <p class="text-center mt-2 text-sm text-gray-600">Flow 2: Form → File + Power BI</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <img src="assets/images/flow3.png" alt="Flow 3" class="max-w-full h-auto object-contain mx-auto" />
+        <p class="text-center mt-2 text-sm text-gray-600">Flow 3: Switch Logic + Email</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <img src="assets/images/flow4.png" alt="Flow 4" class="max-w-full h-auto object-contain mx-auto" />
+        <p class="text-center mt-2 text-sm text-gray-600">Flow 4: OCR + OpenAI + Teams</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="text-center">
-        <a href="index.html#contact" class="inline-block bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-indigo-700 transition duration-300">
-          Get in Touch About This Project
-        </a>
+
+  <!-- Overview Section -->
+  <section class="py-10">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <h2 class="text-2xl font-semibold mb-4">Overview</h2>
+      <p class="text-gray-700 leading-relaxed">
+        These Power Automate flows enable a range of intelligent business automation scenarios, from document processing and form handling to integrating AI and real-time notifications via Microsoft Teams. They demonstrate how low-code workflows can efficiently streamline operations using Microsoft 365, SharePoint, OpenAI, and more.
+      </p>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section class="py-10">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <h2 class="text-2xl font-semibold mb-4">Key Automations</h2>
+      <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-2">
+        <li>Manually trigger document creation workflows with Microsoft Word and send results via email or store to SharePoint.</li>
+        <li>Automate survey/form response collection, file creation, and Power BI dataset refreshes.</li>
+        <li>Use switch logic to tailor workflows per business region or input type with dynamic content merging.</li>
+        <li>Recognize text in scanned PDFs, generate prompts, send to OpenAI for summarization, and notify users in Teams.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Technology Stack -->
+  <section class="py-10">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <h2 class="text-2xl font-semibold mb-4">Technology Stack</h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Power Automate</span>
+        <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-3 py-1 rounded-full">Microsoft 365</span>
+        <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">SharePoint</span>
+        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">OpenAI</span>
+        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">Power BI</span>
+        <span class="bg-pink-100 text-pink-800 text-xs font-semibold px-3 py-1 rounded-full">PDF AI</span>
       </div>
     </div>
   </section>
