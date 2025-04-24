@@ -32,10 +32,42 @@
     </div>
   </section>
 
-  <!-- Tech Tags -->
+  <!-- Screenshot -->
+  <section class="py-12">
+    <div class="container mx-auto px-6">
+      <img src="assets/images/project2_pipeline.png" alt="Pipeline Diagram" class="rounded-lg shadow-lg mx-auto w-full max-w-4xl" />
+    </div>
+  </section>
+
+  <!-- Overview -->
   <section class="py-10">
-    <div class="container mx-auto px-6 text-center">
-      <div class="flex flex-wrap justify-center gap-3">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <h2 class="text-2xl font-semibold mb-4">Overview</h2>
+      <p class="text-gray-700 leading-relaxed">
+        This platform integrates Azure data ingestion, OpenAI-based analysis, and high-performance reporting through Synapse and Power BI. The pipeline handles sensitive employee comments by securing access with Azure Key Vault, using Azure Functions to call OpenAI for performance scoring, and persisting results into Synapse for executive reporting.
+      </p>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section class="py-10">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <h2 class="text-2xl font-semibold mb-4">Key Features</h2>
+      <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-2">
+        <li>Secrets retrieved using Azure Key Vault for secure configuration</li>
+        <li>OpenAI integration through Azure Function for scoring comments</li>
+        <li>Cleaned results stored in ADLS, enriched via ADF</li>
+        <li>Data loaded into Synapse Dedicated SQL Pool for fast analytics</li>
+        <li>Visualizations delivered via Power BI dashboards</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Technology Stack -->
+  <section class="py-10">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <h2 class="text-2xl font-semibold mb-4">Technology Stack</h2>
+      <div class="flex flex-wrap gap-3">
         <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Azure</span>
         <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Data Engineering</span>
         <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">OpenAI</span>
@@ -45,54 +77,10 @@
     </div>
   </section>
 
-  <!-- Pipeline Diagram with Scroll Fix -->
-<section class="py-10">
-  <div class="container mx-auto px-6">
-    <div class="bg-white border rounded-lg shadow-lg p-4 overflow-auto">
-      <figure class="min-w-full">
-        <img src="assets/images/project2_pipeline.png" alt="Pipeline Diagram" class="rounded-lg shadow max-w-none w-full h-auto" />
-      </figure>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Feature List -->
-<section class="py-16 bg-white">
-  <div class="container mx-auto px-6">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-2xl font-semibold mb-6">Architecture Highlights</h2>
-      <ul class="space-y-4 text-gray-700 text-left">
-        <li class="flex items-start gap-2">
-          <span class="text-green-600 text-xl">✅</span>
-          <span>Secrets securely managed using Azure Key Vault</span>
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-green-600 text-xl">✅</span>
-          <span>Azure Function retrieves secrets & calls OpenAI API for cost-effective inference</span>
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-green-600 text-xl">✅</span>
-          <span>Comments cleaned and scored, stored back to ADLS</span>
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-green-600 text-xl">✅</span>
-          <span>Processed data ingested to SQL Pool via ADF for analytics</span>
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-green-600 text-xl">✅</span>
-          <span>Final visualizations powered by Synapse + Power BI dashboards</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Testimonial -->
+  <!-- Quote -->
   <section class="bg-indigo-50 py-12">
-    <div class="container mx-auto px-6 max-w-2xl text-center">
-      <blockquote class="italic text-xl text-gray-700 border-l-4 border-indigo-600 pl-4">
+    <div class="container mx-auto px-6 text-center">
+      <blockquote class="italic text-lg md:text-xl text-gray-700 border-l-4 border-indigo-600 pl-4 inline-block">
         "From ingestion to insight — fully automated, enterprise-grade analytics."
       </blockquote>
     </div>
